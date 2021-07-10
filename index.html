@@ -22,7 +22,7 @@
 <body>
 
     <audio controls></audio>
-    <source src="./Desktop/help-audio/song.mp3" type="audio/mp3">
+    <source src="file:///C:/Users/rawal/Desktop/Lorde.mp3" type="audio/mp3">
     </audio>
 
 
@@ -37,31 +37,52 @@
 
         </div>
 
+
+
+        <div>
+            <h3>Sign Up Page</h3>
+            <input type="email" placeholder="Type your email" id="email">
+            <input type="password" placeholder="Enter your password" id="password">
+            <br>
+            <button id="signUp">Sign Up</button>
+        </div>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+
+        <script>
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            var firebaseConfig = {
+                apiKey: "AIzaSyAdbgoLqHT3GAOSM-sVGCdJyDxxrqt_hDw",
+                authDomain: "help-audio.firebaseapp.com",
+                projectId: "help-audio",
+                storageBucket: "help-audio.appspot.com",
+                messagingSenderId: "250550980085",
+                appId: "1:250550980085:web:97b8c30d0b27f3a15924bc",
+                measurementId: "G-4240T2X7Y0"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+
+            document.getElementById("signUp").addEventListener('click', signUpUser)
+
+            function signUpUser() {
+                let email = document.getElementById('email').value
+                let password = document.getElementById('password').value
+            
+                firebase.auth().createUserWithEmailAndPassword(email, passowrd).catch(e=>{
+                    console.log(e)
+                })
+            }
+
+        </script>
 </body>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
-
-<script>
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    var firebaseConfig = {
-        apiKey: "AIzaSyAdbgoLqHT3GAOSM-sVGCdJyDxxrqt_hDw",
-        authDomain: "help-audio.firebaseapp.com",
-        projectId: "help-audio",
-        storageBucket: "help-audio.appspot.com",
-        messagingSenderId: "250550980085",
-        appId: "1:250550980085:web:97b8c30d0b27f3a15924bc",
-        measurementId: "G-4240T2X7Y0"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-
-</script>
 
 </html>
