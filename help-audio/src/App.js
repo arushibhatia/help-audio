@@ -1,30 +1,52 @@
 import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
+    <Router>
+      <div>
       <header>
-      {/* navbar for home page */}
-      <nav class="navbar">
-        <ul class="menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Recordings</a></li>
-          <li><a href="#">Location</a></li>
-          <li><a href="#">Settings</a></li>
-          <li><a href="#">Login</a></li>
-        </ul>
-      </nav>
+        <nav class="navbar">
+          <ul class="menu">
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/contacts">Contacts</Link></li>
+            <li><Link to="/recordings">Recordings</Link></li>
+            <li><Link to="/location">Location</Link></li>
+            <li><Link to="/settings">Settings</Link></li>
+            <li><Link to="/login">Login</Link></li>
+          </ul>
+        </nav>
       </header>
+        <Switch>
+          <Route path="/">
+            <Home />
+          </Route>
+          <Route path="/contacts">
+            <Contacts />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
+}
+
+function Home() {
+  return (
+    <div>
       <div class="btns">
-          <button id="textBtn" onClick="textContacts()">TEXT A FRIEND</button>
-          <br/>
-          <br/>
-          <button id ="fakeCall" onClick="fakeCallToUser()">FAKE CALL</button>
-          <br/>
-          <br/>
-          <button id ="locationTracker" onClick="trackLocation()">SHARE MY LOCATION</button>
+        <button id="textBtn" onClick="textContacts()">TEXT A FRIEND</button>
+        <br/>
+        <br/>
+        <button id ="fakeCall" onClick="fakeCallToUser()">FAKE CALL</button>
+        <br/>
+        <br/>
+        <button id ="locationTracker" onClick="trackLocation()">SHARE MY LOCATION</button>
       </div>
        {/* <input type="checkbox" id="audio1" name="Audio 1"> */}
         {/* <label for="audio1"> <audio 1> </udio>
@@ -39,9 +61,10 @@ function App() {
         
         <input type="checkbox" id="audio4" name="Audio 4" value="Audio 4">
         <label for="audio4"> <Audio 4> </Audio><audio controls src="./song.mp3"></audio> </label><br> */}
-        <footer>Built by HackHers &copy 2021</footer>
+      <footer>Built by HackHers &copy 2021</footer>
     </div>
-  );
+      
+  )
 }
 
 function Contacts() {
@@ -57,14 +80,13 @@ function Contacts() {
             <ul class="contacts-list">
                 <div class="contact-section">
                     <li class="list__item">
-                        <p class="contact-name">Jackie</p>
-                        <p class="relationship">Friend</p>
+                      <p class="contact-name">Jackie</p>
+                      <p class="relationship">Friend</p>
                     </li>
-
                     <li class="list__item">
-                            {/* phone and message icon */}
-                            <i class="fas fa-phone"></i>
-                            <i class="fas fa-comments"></i>
+                        {/* phone and message icon */}
+                        <i class="fas fa-phone"></i>
+                        <i class="fas fa-comments"></i>
                     </li>
                 </div>  
                 <hr />
@@ -74,36 +96,36 @@ function Contacts() {
                         <p class="relationship">Friend</p>
                     </li>
                     <li class="list__item">
-                            {/* phone and message icon */}
-                            <i class="fas fa-phone"></i>
-                            <i class="fas fa-comments"></i>
+                        {/* phone and message icon */}
+                        <i class="fas fa-phone"></i>
+                        <i class="fas fa-comments"></i>
                     </li>
                 </div>  
                 <hr />
                 <div class="contact-section">
                   <li class="list__item">
-                      <p class="contact-name">Sonya</p>
-                      <p class="relationship">Friend</p>
+                    <p class="contact-name">Sonya</p>
+                    <p class="relationship">Friend</p>
                   </li>
 
                   <li class="list__item">
-                         {/* phone and message icon  */}
-                          <i class="fas fa-phone"></i>
-                          <i class="fas fa-comments"></i>
+                      {/* phone and message icon  */}
+                      <i class="fas fa-phone"></i>
+                      <i class="fas fa-comments"></i>
                   </li>
                 </div>  
                 <hr />
 
                 <div class="contact-section">
                         <li class="list__item">
-                            <p class="contact-name">Arushi</p>
-                            <p class="relationship">Friend</p>
+                          <p class="contact-name">Arushi</p>
+                          <p class="relationship">Friend</p>
                         </li>
     
                         <li class="list__item">
-                                {/* phone and message icon */}
-                                <i class="fas fa-phone"></i>
-                                <i class="fas fa-comments"></i>
+                            {/* phone and message icon */}
+                            <i class="fas fa-phone"></i>
+                            <i class="fas fa-comments"></i>
                         </li>
                     </div>  
                     <hr />
@@ -113,29 +135,25 @@ function Contacts() {
                                 <p class="contact-name">Sona</p>
                                 <p class="relationship">Friend</p>
                             </li>
-        
                             <li class="list__item">
-                                    {/*phone and message icon */}
-                                    <i class="fas fa-phone"></i>
-                                    <i class="fas fa-comments"></i>
+                                {/*phone and message icon */}
+                                <i class="fas fa-phone"></i>
+                                <i class="fas fa-comments"></i>
                             </li>
                         </div>  
                         <hr />
                         <div class="contact-section">
-                                <li class="list__item">
-                                    <p class="contact-name">Vinitha</p>
-                                    <p class="relationship">Friend</p>
-                                </li>
-            
-                                <li class="list__item">
-                                        {/* phone and message icon */}
-                                        <i class="fas fa-phone"></i>
-                                        <i class="fas fa-comments"></i>
-                                </li>
-                            </div>  
-                            <hr />
-
-                                    
+                            <li class="list__item">
+                                <p class="contact-name">Vinitha</p>
+                                <p class="relationship">Friend</p>
+                            </li>
+                            <li class="list__item">
+                                    {/* phone and message icon */}
+                                    <i class="fas fa-phone"></i>
+                                    <i class="fas fa-comments"></i>
+                            </li>
+                        </div>  
+        <hr />              
             </ul>
         </section>
 
