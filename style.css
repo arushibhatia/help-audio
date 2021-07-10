@@ -1,12 +1,20 @@
-.btns {
-  border-radius: 40px;
-
-  background-color: #4caf50; /* Green */
-  border: double;
-  color: rgb(11, 61, 224);
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+.btns button{
+    border-radius: 40px;
+    background-color: #04AA6D; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 50%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+    
 }
+
+.btns button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+  }
+  
+  /* Add a background color on hover */
+  .btns button:hover {
+    background-color: #3e8e41;
+  }
