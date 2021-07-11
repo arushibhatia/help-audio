@@ -42,6 +42,9 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+#fakeCall a {
+  color:white;
+}
 
 
 #locationTracker {

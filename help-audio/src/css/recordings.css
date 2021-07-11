@@ -1,0 +1,21 @@
+.callBtn {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.audioBtn {
+text-align: center;
+background-color: purple; /* Green */
+  border: double;
+  color: white;
+  padding: 15px 200px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 20px;
+    margin-right: 20px;
+}

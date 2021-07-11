@@ -8,6 +8,7 @@ import Settings from './components/Settings'
 import User from './components/User'
 import Login from './components/Login'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 import React from "react"
 import Signup from "./components/Signup"
@@ -118,7 +119,11 @@ function Home() {
       <button id="textBtn" onClick={textContacts}>TEXT A FRIEND</button>
     <br/>
       <br/>
-      <button id ="fakeCall" onClick="fakeCallToUser()">FAKE CALL</button>
+      <button id ="fakeCall" onClick="fakeCallToUser()">
+        <Link to='/components/recordings'>
+          FAKE CALL
+        </Link>
+      </button>
     <br/>
       <br/>
       <button id ="locationTracker"><a href="tel:9547611133">CALL WOMEN IN DISTRESS 24/7 CRISIS HOTLINE</a>
