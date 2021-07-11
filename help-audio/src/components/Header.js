@@ -31,7 +31,7 @@ const Header = () => {
             </Link>
             <Link to='/components/contacts'>
             <li className="option" onClick={closeMobileMenu}>
-              CONTACT
+              CONTACTS
             </li>
             </Link>
             <Link to='/components/settings'>

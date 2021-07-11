@@ -6,15 +6,17 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon'; 
 import ListItemText from '@material-ui/core/ListItemText'; 
 import Divider from '@material-ui/core/Divider'; 
-//import InboxIcon from '@material-ui/icons/Inbox';
 import DraftsIcon from '@material-ui/icons/Drafts'; 
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
       width: '100%',
-      maxWidth: 360,
+      maxWidth: 7000,
       backgroundColor: theme.palette.background.paper,
+      justifyContent:'center', 
+      alignItems:'center',
     },
   }));
   
@@ -31,22 +33,64 @@ export default function Contacts() {
           <ListItemIcon>
             <AccountCircleIcon />
           </ListItemIcon>
-          <ListItemText primary="Inbox" />
+          <ListItemText primary="Sona" />
         </ListItem>
         <ListItem button>
           <ListItemIcon>
-            <DraftsIcon />
+            <AccountCircleIcon />
           </ListItemIcon>
-          <ListItemText primary="Drafts" />
+          <ListItemText primary="Vinitha" />
+        </ListItem>
+        <ListItem button>
+          <ListItemIcon>
+            <AccountCircleIcon />
+          </ListItemIcon>
+          <ListItemText primary="Malika" />
+        </ListItem>
+        <ListItem button>
+          <ListItemIcon>
+            <AccountCircleIcon />
+          </ListItemIcon>
+          <ListItemText primary="Sonya" />
+        </ListItem>
+        <ListItem button>
+          <ListItemIcon>
+            <AccountCircleIcon />
+          </ListItemIcon>
+          <ListItemText primary="Jackie" />
+        </ListItem>
+        <ListItem button>
+          <ListItemIcon>
+            <AccountCircleIcon />
+          </ListItemIcon>
+          <ListItemText primary="Jane" />
+        </ListItem>
+        <ListItem button>
+          <ListItemIcon>
+            <AccountCircleIcon />
+          </ListItemIcon>
+          <ListItemText primary="Erik" />
+        </ListItem>
+        <ListItem button>
+          <ListItemIcon>
+            <AccountCircleIcon />
+          </ListItemIcon>
+          <ListItemText primary="Kevin" />
+        </ListItem>
+        <ListItem button>
+          <ListItemIcon>
+            <AccountCircleIcon />
+          </ListItemIcon>
+          <ListItemText primary="Amy" />
         </ListItem>
       </List>
       <Divider />
       <List component="nav" aria-label="secondary mailbox folders">
         <ListItem button>
-          <ListItemText primary="Trash" />
+          <ListItemText primary="Create New Contact" />
         </ListItem>
         <ListItemLink href="#simple-list">
-          <ListItemText primary="Spam" />
+          <ListItemText primary="Delete Contact" />
         </ListItemLink>
       </List>
     </div>
