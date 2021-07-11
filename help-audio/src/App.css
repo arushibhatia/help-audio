@@ -54,6 +54,10 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#locationTracker a {
+  color: white;
+}
+
 footer {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   left: 0;

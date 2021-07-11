@@ -114,7 +114,8 @@ function Home() {
       <button id ="fakeCall" onClick="fakeCallToUser()">FAKE CALL</button>
     <br/>
       <br/>
-      <button id ="locationTracker" onClick="trackLocation()">HOTLINE</button>
+      <button id ="locationTracker"><a href="tel:9547611133">CALL WOMEN IN DISTRESS 24/7 CRISIS HOTLINE</a>
+</button>
     </div>
   </div>
   );
