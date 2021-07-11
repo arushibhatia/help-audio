@@ -110,8 +110,10 @@ function Home() {
   return (
     <div>
     <br/><br/>
+    <div class="title">
+
     <h1 style={{textAlign: "center"}}>Welcome to Guardian!</h1>
-    <p style={{textAlign: "center"}}>Our application is here to help you in a time of need. Press the buttons below if you need help!</p>
+    <p style={{textAlign: "center"}}>Our application is here to help you in a time of need. Press the buttons below if you need help!</p><br/><br/><br/><br/></div>
     <div class="btns">
       <button id="textBtn" onClick={textContacts}>TEXT A FRIEND</button>
     <br/>

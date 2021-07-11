@@ -8,6 +8,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider'; 
 import DraftsIcon from '@material-ui/icons/Drafts'; 
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import "../css/contacts.css";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -27,8 +28,11 @@ const useStyles = makeStyles((theme) => ({
 export default function Contacts() {
     const classes = useStyles();
     return (
+      
         <div className={classes.root}>
+   
       <List component="nav" aria-label="main mailbox folders">
+      
         <ListItem button>
           <ListItemIcon>
             <AccountCircleIcon />
@@ -94,6 +98,7 @@ export default function Contacts() {
         </ListItemLink>
       </List>
     </div>
+    
     );
 }
 

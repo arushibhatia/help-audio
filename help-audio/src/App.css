@@ -9,6 +9,9 @@ body {
   font-family: 'Hind', sans-serif;
 }
 
+.title {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .btns {
  text-align: center;
  
@@ -19,7 +22,7 @@ body {
   background-color: purple; 
   border: double;
   color: white;
-  padding: 15px 50px;
+  padding: 15px 255px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -32,7 +35,7 @@ body {
   background-color: purple; /* Green */
   border: double;
   color: white;
-  padding: 15px 74px;
+  padding: 15px 280px;
   text-align: center;
   text-decoration: none;
   display: inline-block;

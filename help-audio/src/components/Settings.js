@@ -6,6 +6,7 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import "../css/settings.css";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -32,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
     };
   
     return (
+      
       <div className={classes.root}>
         <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
           <AccordionSummary
