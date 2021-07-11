@@ -5,6 +5,7 @@ import Contacts from './components/Contacts'
 import Location from './components/Location'
 import Recordings from './components/Recordings'
 import Settings from './components/Settings'
+import User from './components/User'
 import Login from './components/Login'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
@@ -17,7 +18,7 @@ import PrivateRoute from "./components/PrivateRoute"
 import ForgotPassword from "./components/ForgotPassword"
 import UpdateProfile from "./components/UpdateProfile"
 
-import firebase from 'firebase/app';
+import firebase from './firebase';
 import 'firebase/firestore';
 
 
@@ -43,7 +44,8 @@ function App() {
       <Route path="/components/contacts"  component={Contacts}/>
       <Route path="/components/about"  component={About}/>
       <Route path ="/" exact component={Home}/>
-      
+      <Route path="/components/user" component={User} />
+
       </Switch>
       </AuthProvider>
       <footer>Built by HackHers copyright 2021</footer>
@@ -70,17 +72,19 @@ function Home() {
 
     db.collection('users').get().then((snapshot) => {
       console.log(snapshot.docs)
+      console.log("user obj")
+      console.log(user)
       snapshot.docs.forEach(doc => {
-        if(doc.data().uid === user.uid) 
+        console.log("doc data")
+        console.log(doc.data())
+        if(doc.data()!== null && doc.data().myLoginEmail === user.email) 
         {
-           console.log(doc.data())
-           let allContacts = doc.data().emergencyContactName; // database contacts object
+           let contactName = doc.data().emergencyContactName; // database contacts name
            let name =  doc.data().myName;
-           Object.keys(allContacts).forEach((contact) =>
-             {
-               let sendString = "Hey " + contact + "! " + name + " feels like they are in danger and has auto alerted you of this via our app. Please call them and stay on the line until they are safe."
+        
+               let sendString = "Hey " + contactName + "! " + name + " feels like they are in danger and has auto alerted you of this via our app. Please call them and stay on the line until they are safe."
                console.log(sendString);
-               let phoneNum = allContacts[contact];
+               let phoneNum = doc.data().emergencyContactNumber;
                console.log(phoneNum);
                fetch('https://textbelt.com/text', {
                  method: 'post',
@@ -95,8 +99,7 @@ function Home() {
                }).then(data => {
                  console.log(data);
                });
-              }
-           )
+           
             }
 
         }

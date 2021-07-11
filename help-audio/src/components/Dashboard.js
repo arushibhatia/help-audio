@@ -36,6 +36,11 @@ export default function Dashboard() {
           Log Out
         </Button>
       </div>
+      <div className="w-100 text-center mt-2">
+        <Link to='/components/user'>
+          <button type="button" className="btn btn-info">User Contact Input</button>
+        </Link>
+      </div>
     </>
   )
 }
