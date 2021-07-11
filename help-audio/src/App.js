@@ -88,7 +88,7 @@ function Home() {
                  body: JSON.stringify({
                    phone: '19195790432',
                    message: sendString,
-                   key: 'textbelt',
+                   key: '4722fe44d79de99464d8437aea8875e7154670fboiE5L1hQg6rwtgWJLJrcWX3iz',
                  }),
                }).then(response => {
                  return response.json();
