@@ -110,6 +110,7 @@ function Home() {
   return (
     <div>
     <br/><br/>
+    <h1>Welcome to Guardian!</h1>
     <div class="btns">
       <button id="textBtn" onClick={textContacts}>TEXT A FRIEND</button>
     <br/>
