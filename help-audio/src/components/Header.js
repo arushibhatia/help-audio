@@ -29,7 +29,7 @@ const Header = () => {
               RECORDINGS
             </li>
             </Link>
-            <Link to='/components/contact'>
+            <Link to='/components/contacts'>
             <li className="option" onClick={closeMobileMenu}>
               CONTACT
             </li>
