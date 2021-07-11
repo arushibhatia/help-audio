@@ -9,13 +9,31 @@ import Settings from './components/Settings'
 import Login from './components/Login'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
+import React from "react"
+import Signup from "./components/Signup"
+import { Container } from "react-bootstrap"
+import { AuthProvider } from "./contexts/AuthContext"
+import Dashboard from "./components/Dashboard"
+import PrivateRoute from "./components/PrivateRoute"
+import ForgotPassword from "./components/ForgotPassword"
+import UpdateProfile from "./components/UpdateProfile"
+
 
 function App() {
   return (
+    <Container
+    className="d-flex align-items-center justify-content-center"
+    style={{ minHeight: "100vh" }}
+    >
     <Router>
     <div className="app">
       <Nav />
+      <AuthProvider>
       <Switch>
+      <PrivateRoute exact path="/components/dashboard" component={Dashboard} />
+      <PrivateRoute path="/update-profile" component={UpdateProfile} />
+      <Route path="/signup" component={Signup} />
+      <Route path="/forgot-password" component={ForgotPassword} />
       <Route path="/components/login"  component={Login}/>
       <Route path="/components/settings"  component={Settings}/>
       <Route path="/components/recordings"  component={Recordings}/>
@@ -25,10 +43,12 @@ function App() {
       <Route path ="/" exact component={Home}/>
       
       </Switch>
+      </AuthProvider>
       <footer>Built by HackHers &copy 2021</footer>
     
     </div>
     </Router>
+    </Container>
      );
    }
 
